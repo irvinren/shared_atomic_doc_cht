@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>歡迎光臨共享原子性的文檔! &#8212; Documentation for shared_atomic</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="原子API範例（多線程多進程混合）:" href="%E5%8E%9F%E5%AD%90API%E7%AF%84%E4%BE%8B.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          <a href="%E5%8E%9F%E5%AD%90API%E7%AF%84%E4%BE%8B.html" title="Next document">原子API範例（多線程多進程混合）:</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>歡迎光臨共享原子性的文檔!<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p><big> 這個模塊可以為python程序提供多線程與多進程程序當中所需要的可共享變量的原子操作。</p>
+<p>內部提供的類:</p>
+<ul class="simple">
+<li><ul>
+<li><p><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E6%9C%89%E7%AC%A6%E8%99%9F%E6%95%B4%E6%95%B8API.html"><span class="doc std std-doc">atomic_int/原子有符號整數</span></a></p></li>
+</ul>
+</li>
+<li><ul>
+<li><p><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E7%84%A1%E7%AC%A6%E8%99%9F%E6%95%B4%E6%95%B8API.html"><span class="doc std std-doc">atomic_uint/原子無符號整數</span></a></p></li>
+</ul>
+</li>
+<li><ul>
+<li><p><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%B8%83%E7%88%BE%E5%9E%8B%E6%B5%AE%E9%BB%9E%E5%9E%8BAPI.html"><span class="doc std std-doc">atomic_float/原子浮點數</span></a></p></li>
+</ul>
+</li>
+<li><ul>
+<li><p><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%B8%83%E7%88%BE%E5%9E%8B%E6%B5%AE%E9%BB%9E%E5%9E%8BAPI.html"><span class="doc std std-doc">atomic_bool/原子布爾型</span></a></p></li>
+</ul>
+</li>
+<li><ul>
+<li><p><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%AD%97%E7%AF%80%E6%95%B8%E7%B5%84API.html"><span class="doc std std-doc">atomic_bytearray/原子字節數組</span></a></p></li>
+</ul>
+</li>
+<li><ul>
+<li><p><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2API.html"><span class="doc std std-doc">atomic_string/原子字符串</span></a></p></li>
+</ul>
+</li>
+<li><ul>
+<li><p><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E9%9B%86%E5%90%88API.html"><span class="doc std std-doc">atomic_set/原子集合</span></a>, 需要安裝 <a class="reference external" href="https://pypi.org/project/bitarray/">bitarray&gt;=2.4.0</a>.</p></li>
+</ul>
+</li>
+<li><ul>
+<li><p><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%88%97%E8%A1%A8API.html"><span class="doc std std-doc">atomic_list/原子列表</span></a>, 需要安裝 <a class="reference external" href="https://pypi.org/project/bitarray/">bitarray&gt;=2.4.0</a>.</p></li>
+</ul>
+</li>
+</ul>
+<p>從舊版本繼承的CTYPES API可以一直沿用。</p>
+<p>系統需求:</p>
+<ul class="simple">
+<li><p>Linux/MacOSX,</p></li>
+<li><ul>
+<li><p>支持 CPython 3.0-3.11, Pypy 3.0-3.9,</p></li>
+</ul>
+</li>
+<li><ul>
+<li><p>需要 cffi &gt;= 1.0.0, &lt;= 1.1.15,</p></li>
+</ul>
+</li>
+<li><p>Windows,</p></li>
+<li><ul>
+<li><p>只支持 CPython 3.0-3.11, 不支持 Pypy.</p></li>
+</ul>
+</li>
+<li><ul>
+<li><p>需要 cppyy &gt;=1.5.0, &lt;=2.3.1, 它使用 <a class="reference external" href="https://github.com/vgvassilev/cling/tree/master/tools/packaging">cling</a> 作為C++解釋器.</p></li>
+</ul>
+</li>
+<li><ul>
+<li><p>多進程模式不支持, 只支持單進程多線程模式.</p></li>
+</ul>
+</li>
+</ul>
+<p>使用範例, 請瀏覽 <a class="reference internal" href="%E5%8E%9F%E5%AD%90API%E7%AF%84%E4%BE%8B.html"><span class="doc std std-doc">原子API範例</span></a>，<a class="reference internal" href="CTYPES%E7%AF%84%E4%BE%8B.html"><span class="doc std std-doc">ctypes_API使用範例</span></a>。</p>
+<p>ctypes API 的使用參考, 請瀏覽 <a class="reference internal" href="CTYPES_API.html"><span class="doc std std-doc">ctypes API</span></a>.</big></p>
+<div class="section" id="id2">
+<h2><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90API%E7%AF%84%E4%BE%8B.html">原子API範例（多線程多進程混合）:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CTYPES%E7%AF%84%E4%BE%8B.html">ctypes 範例:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E6%9C%89%E7%AC%A6%E8%99%9F%E6%95%B4%E6%95%B8API.html">原子有符號整數API:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E7%84%A1%E7%AC%A6%E8%99%9F%E6%95%B4%E6%95%B8API.html">原子無符號整數API:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%B8%83%E7%88%BE%E5%9E%8B%E6%B5%AE%E9%BB%9E%E5%9E%8BAPI.html">原子布爾型浮點型API:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%AD%97%E7%AF%80%E6%95%B8%E7%B5%84API.html">原子字節數組API:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%88%97%E8%A1%A8API.html">原子列表API:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E9%9B%86%E5%90%88API.html">原子集合API:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2API.html">原子字符串API:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CTYPES_API.html">ctypes API 參考</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#shared-atomic-loaddll">shared_atomic.loaddll()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#api">整數類型支持18 種API 可以用來實現原子操作,</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#id1">布爾原子函數:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#id2">字節原子函數:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#id3">無符號字節原子函數:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#id4">短整型原子函數:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#id5">無符號短整型原子函數:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#id6">整型原子函數:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#id7">無符號整型原子函數:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#id8">寬字符型原子函數:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#linux-macosx64-windows32">長整型原子函數(Linux/MacOSX上是64位，Windows上是32位):</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#id9">無符號長整型原子函數(Linux/MacOSX上是64位，Windows上是32位):</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#size-t">size_t原子函數:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#size-t-ssize-t">有符號size_t（ssize_t）原子函數:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#id10">長長整型原子函數:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#id11">無符號長長整型原子函數:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#id12">單精度符點數原子函數:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#id13">雙精度符點數原子函數:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CTYPES_API.html#id14">長雙精度符點數原子函數:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><img alt="Python Logo" src="https://www.python.org/static/community_logos/python-logo.png" /></p>
+</div>
+</div>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          <a href="%E5%8E%9F%E5%AD%90API%E7%AF%84%E4%BE%8B.html" title="Next document">原子API範例（多線程多進程混合）:</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">shared_atomic</a></h1>
+
+
+
+<p class="blurb">多线程多进程共享原子性</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=irvinren&repo=shared_atomic&type=watch&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90API%E7%AF%84%E4%BE%8B.html">原子API範例（多線程多進程混合）:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CTYPES%E7%AF%84%E4%BE%8B.html">ctypes 範例:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E6%9C%89%E7%AC%A6%E8%99%9F%E6%95%B4%E6%95%B8API.html">原子有符號整數API:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E7%84%A1%E7%AC%A6%E8%99%9F%E6%95%B4%E6%95%B8API.html">原子無符號整數API:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%B8%83%E7%88%BE%E5%9E%8B%E6%B5%AE%E9%BB%9E%E5%9E%8BAPI.html">原子布爾型浮點型API:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%AD%97%E7%AF%80%E6%95%B8%E7%B5%84API.html">原子字節數組API:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%88%97%E8%A1%A8API.html">原子列表API:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E9%9B%86%E5%90%88API.html">原子集合API:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2API.html">原子字符串API:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CTYPES_API.html">ctypes API 參考</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="%E5%8E%9F%E5%AD%90API%E7%AF%84%E4%BE%8B.html" title="next chapter">原子API範例（多線程多進程混合）:</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+<h3 class="donation">Donate/support</h3>
+
+
+
+<p>
+<a class="badge" href="https://paypal.me/xiquanren">
+<img src="https://img.shields.io/badge/donate-%E2%9D%A4%C2%A0-ff69b4.svg?style=flat" alt="Donate">
+</a>
+</p>
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Xiquan Ren <xiquanren@yandex.com>.
+      
+      |
+      <a href="_sources/index.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
