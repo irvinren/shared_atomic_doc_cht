@@ -51,7 +51,7 @@
 <h1>原子API範例（多線程多進程混合）:<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
 <p>使用本模塊需如下步驟:</p>
 <ol class="arabic">
-<li><p>創建子進程所需要的函數, 參考 <a class="reference internal" href="%E5%8E%9F%E5%AD%90%E7%84%A1%E7%AC%A6%E8%99%9F%E6%95%B4%E6%95%B8API.html"><span class="doc std std-doc">原子無符號整數API</span></a>, <a class="reference internal" href="%E5%8E%9F%E5%AD%90%E6%9C%89%E7%AC%A6%E8%99%9F%E6%95%B4%E6%95%B8API.html"><span class="doc std std-doc">原子有符號整數API</span></a>, <a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%AD%97%E7%AF%80%E6%95%B8%E7%B5%84API.html"><span class="doc std std-doc">原子字節數組API</span></a>, <a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2API.html"><span class="doc std std-doc">原子字符串API</span></a>, <a class="reference internal" href="%E5%8E%9F%E5%AD%90%E9%9B%86%E5%90%88API.html"><span class="doc std std-doc">原子集合API</span></a>, <a class="reference internal" href="%E5%8E%9F%E5%AD%90%E5%88%97%E8%A1%A8API.html"><span class="doc std std-doc">原子列表API</span></a>, 子進程當中可以創建多線程.</p>
+<li><p>創建子進程所需要的函數, 子進程當中可以創建多線程.</p>
 <p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">process_run(a):</span></code></p>
 <p><code class="docutils literal notranslate">&#160;&#160;&#160;&#160; <span class="pre">def</span> <span class="pre">subthread_run(a):</span></code></p>
 <p><code class="docutils literal notranslate">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">a.array_sub_and_fetch(b'\x0F')</span></code></p>
